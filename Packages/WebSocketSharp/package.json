@@ -1,0 +1,15 @@
+{
+    "name": "org.nuget.websocketsharp",
+    "version": "1.0.3-rc11",
+    "displayName": "websocket-sharp - WebSocket for standard .NET Framework",
+    "description": "websocket-sharp provides the WebSocket protocol client and server.\n\nIt supports:\n- RFC 6455\n- WebSocket Client and Server\n- Per-message Compression extension\n- Secure Connection\n- HTTP Authentication (Basic/Digest)\n- Query String, Origin header and Cookies\n- Connecting through the HTTP Proxy server\n- .NET 3.5 or later (includes compatible)",
+    "unity": "2018.3",
+    "keywords": [
+        "WebSocket"
+    ],
+    "author": {
+        "name": "sta",
+        "email": "",
+        "url": "http://sta.github.io/websocket-sharp"
+    }
+}

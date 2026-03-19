@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e83313f614b96a43ad13b9cf3ef9882
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bigIconSprite: {fileID: 9207052540753377165, guid: 250a0495e6be7c64f8ca9dec910f9ad1, type: 3}
+  - iconSprite: {fileID: 6949415690091722714, guid: 682c0a231264afc4a9502a859f2128f4, type: 3}
+  - smallIconSprite: {fileID: 8491074366105222904, guid: a4f926d5a687e1243b2657244494388b, type: 3}
+  - window: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
