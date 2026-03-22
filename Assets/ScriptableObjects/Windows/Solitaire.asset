@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Solitaire
   m_EditorClassIdentifier: Assembly-CSharp::Window
   windowLength: 597
-  windowHeight: 434
+  windowHeight: 452
   icon: {fileID: -6004497516270271316, guid: dc65a3bcd36d45e4e9c96f596ed4157f, type: 3}
   titleBarText: Solitaire
   canAdjustSize: 0

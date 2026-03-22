@@ -9,7 +9,9 @@ public class AdminSettings : MonoBehaviour
     public GameObject ThemeTab;
     public GameObject LaunchAppsTab;
     public GameObject GeneralTab;
-    public enum OpenTab { Themes, LaunchApps, General };
+    public GameObject AboutTab;
+    public GameObject CloseAppTab;
+    public enum OpenTab { Themes, LaunchApps, General, About, Close };
     public OpenTab openTab;
     [Space]
     [Header("Desktop Related")]
@@ -101,6 +103,8 @@ public class AdminSettings : MonoBehaviour
         if (openTab == OpenTab.Themes) ThemeTab.SetActive(false);
         else if (openTab == OpenTab.LaunchApps) LaunchAppsTab.SetActive(false);
         else if (openTab == OpenTab.General) GeneralTab.SetActive(false);
+        else if (openTab == OpenTab.About) AboutTab.SetActive(false);
+        else if (openTab == OpenTab.Close) CloseAppTab.SetActive(false);
     }
 
     public void PongButton()
@@ -115,7 +119,7 @@ public class AdminSettings : MonoBehaviour
     public void PaintButton()
     {
         CloseInterface();
-        //Launch Pong Interface
+        //Launch Paint Interface
         desktopIcons.SetActive(false);
         paint.SetActive(true);
     }
@@ -123,7 +127,7 @@ public class AdminSettings : MonoBehaviour
     public void HockeyButton()
     {
         CloseInterface();
-        //Launch Pong Interface
+        //Launch Hockey Interface
         desktopIcons.SetActive(false);
         hockeyGame.SetActive(true);
         hockeyUI.SetActive(true);
@@ -132,7 +136,7 @@ public class AdminSettings : MonoBehaviour
     public void CircleNinjaButton()
     {
         CloseInterface();
-        //Launch Pong Interface
+        //Launch Circle Ninja Interface
         desktopIcons.SetActive(false);
         circleNinja.SetActive(true);
         circleNinjaUI.SetActive(true);
@@ -143,5 +147,24 @@ public class AdminSettings : MonoBehaviour
         pongUI.SetActive(false);
         pongGame.SetActive(false);
         desktopIcons.SetActive(true);
+    }
+
+    public void OpenAboutPage()
+    {
+        CloseTab();
+        openTab = OpenTab.About;
+        AboutTab.SetActive(true);
+    }
+
+    public void OpenShutdownPage()
+    {
+        CloseTab();
+        openTab = OpenTab.Close;
+        CloseAppTab.SetActive(true);
+    }
+
+    public void Shutdown()
+    {
+        Application.Quit();
     }
 }

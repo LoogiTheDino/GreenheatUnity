@@ -34,6 +34,9 @@ public class WindowScript : MonoBehaviour
     [HideInInspector]
     public bool maximised;
 
+    [Space]
+    public bool canClose = true;
+
     //public Image maximiseButton;
     //public Image minimiseButton;
     public Image closeButton;
@@ -66,11 +69,14 @@ public class WindowScript : MonoBehaviour
 
     public void CloseWindow()
     {
-        ObjectDirectory.Instance.RemoveFromList(closeButton.GetComponent<RectTransform>());
-        ObjectDirectory.Instance.RemoveFromList(GetComponentInChildren<TitleBarScript>().GetComponent<RectTransform>());
+        if (canClose)
+        {
+            ObjectDirectory.Instance.RemoveFromList(closeButton.GetComponent<RectTransform>());
+            ObjectDirectory.Instance.RemoveFromList(GetComponentInChildren<TitleBarScript>().GetComponent<RectTransform>());
 
-        if(icon != null) icon.CloseApp();
+            if (icon != null) icon.CloseApp();
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
     }
 }
